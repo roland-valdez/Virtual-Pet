@@ -5,7 +5,7 @@ let pet_info = {
   name:"Zeus",
   weight: 48,
   happiness: 0,
-  message: "What should we do?"
+  message: "Tati I'm hungry. Please feed me!?"
 }
   // Called function to update the name, happiness, and weight of our pet in our HTML
   checkAndUpdatePetInfoInHtml();// why no passed argument
@@ -18,12 +18,17 @@ let pet_info = {
   
 console.log()
   function clickedMessageButton() {
-    if (clickedPlayButton === 'on'){
-      pet_info.message = "Can we play some more?";
-    }else if (clickedTreatButton === 'on'){
-      pet_info.message = "Thanks for the treat I was hungry. Tati has'nt fed me yet!";
-    }else if (clickedExerciseButton === 'on'){
+    var random = Math.floor(Math.random() * (5 - 1) ) + 1;
+    if (random == 1){
+      pet_info.message = "Can we play?";
+    }else if (random == 2){
+      pet_info.message = "Tati hasn't fed me yet!";
+    }else if (random == 3){
       pet_info.message = "I don't like exercise I prefer to go out and play!";
+    }else if (random == 4){
+      pet_info.message = "I love Roland the best!";
+    }else if (random == 5){
+      pet_info.message = "I don't like to shower. Just like the Valdez kids!";
     }
       checkAndUpdatePetInfoInHtml();
     }
