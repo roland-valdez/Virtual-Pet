@@ -16,9 +16,9 @@ let pet_info = {
   $('.exercise-button').click(clickedExerciseButton);
   $('.message-button').click(clickedMessageButton);
   
-console.log()
+
   function clickedMessageButton() {
-    var random = Math.floor(Math.random() * (5 - 1) ) + 1;
+    var random = Math.floor(Math.random() * (6 - 1) ) + 1;
     if (random == 1){
       pet_info.message = "Can we play?";
     }else if (random == 2){
@@ -46,8 +46,8 @@ console.log()
   }
   
   function clickedExerciseButton() {
-    //pet_info.happiness -= 2;// Decrease pet happiness
-    pet_info.happiness = pet_info.happiness - 2// Decrease pet happiness
+    pet_info.happiness -= 2;// Decrease pet happiness
+    //pet_info.happiness = pet_info.happiness - 2// Decrease pet happiness
     pet_info["weight"] = pet_info["weight"] - 1;// Decrease pet weight
     checkAndUpdatePetInfoInHtml();
   }
