@@ -28,6 +28,7 @@ header {
 h1 {
   font-weight: bold;
   color: blue;
+  text-align: center;
 }
 
 .bold {
@@ -55,6 +56,8 @@ footer a {
 
 .pet-image {
   height:500px;
+/*   float: center;
+   */
 }
 
 .dashboard div {
@@ -62,8 +65,11 @@ footer a {
 }
 
 .pet-image-container {
-  float:center;
   padding:10px;
+  display: flex;
+  justify-content: center;
+/*    why cant I just use float center:*/
+ 
 }
 
 .dashboard {
@@ -71,14 +77,16 @@ footer a {
   display:flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
   
 }
 
 .button-container {
   margin-top:20px;
-   width: 100%;
+  width: 100%;
   display:flex;
   flex-direction:row;
+  justify-content: center;
 }
 
 .button-container button {
